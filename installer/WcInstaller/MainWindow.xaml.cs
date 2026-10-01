@@ -38,17 +38,17 @@ namespace WcInstaller
             UpdateButtons();
 
             if (App.IsUninstall)
-                Title = "Wallpaper Connecter 卸载向导";
+                Title = "Wallpaper Connecter Uninstall Wizard";
         }
 
         private void UpdateButtons()
         {
             var pages = App.IsUninstall ? _uninstallPages : _installPages;
             BtnBack.Visibility = _currentIndex > 0 ? Visibility.Visible : Visibility.Collapsed;
-            BtnNext.Content = _currentIndex == pages.Length - 1 ? "完成" : "下一步";
+            BtnNext.Content = _currentIndex == pages.Length - 1 ? "Finish" : "Next";
             BtnCancel.Visibility = _currentIndex < pages.Length - 1 ? Visibility.Visible : Visibility.Collapsed;
 
-            // 许可协议页：必须接受才能下一步
+            // License Agreement页：必须接受才能Next
             if (!App.IsUninstall && _currentIndex == 1 && !State.LicenseAccepted)
                 BtnNext.IsEnabled = false;
             else
@@ -102,7 +102,7 @@ namespace WcInstaller
 
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("确定要取消安装吗？", "确认", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (MessageBox.Show("OK要Cancel安装吗？", "确认", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 Close();
         }
     }

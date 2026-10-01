@@ -8,7 +8,7 @@ using System.Text;
 namespace WcUiWpf.Helpers;
 
 /// <summary>
-/// 直接通过 Windows API 设置窗口透明度（不需要DLL注入）
+/// 直接通过 Windows API Settings窗口透明度（不需要DLL注入）
 /// 使用 EnumWindows 枚举所有顶层窗口，兼容多进程 Electron 应用
 /// </summary>
 public static class WindowTransparencyHelper

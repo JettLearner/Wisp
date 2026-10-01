@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" x:Name="TitleBar" Cursor="Hand" Background="Transparent">
-                <TextBlock Text="设置" Foreground="#F0FFFFFF" FontSize="15" FontWeight="SemiBold"
+                <TextBlock Text="Settings" Foreground="#F0FFFFFF" FontSize="15" FontWeight="SemiBold"
                            VerticalAlignment="Center" Margin="20,0,0,0" />
                 <Button x:Name="BtnClose" Content="✕" Width="28" Height="28"
                         HorizontalAlignment="Right" Margin="0,0,12,0"
@@ -37,7 +37,7 @@
                             Background="Transparent" Foreground="#A0FFFFFF" BorderBrush="#40FFFFFF" BorderThickness="1"
                             FontSize="12" Cursor="Hand" HorizontalContentAlignment="Center" />
 
-                    <TextBlock Text="关于" Foreground="#007ACC" FontSize="13" FontWeight="SemiBold" Margin="0,16,0,8" />
+                    <TextBlock Text="About" Foreground="#007ACC" FontSize="13" FontWeight="SemiBold" Margin="0,16,0,8" />
                     <TextBlock Text="Wallpaper Connecter v0.1.0" Foreground="#A0FFFFFF" FontSize="12" Margin="0,2" />
                     <TextBlock Text="创作者：周璟琦-Jett" Foreground="#A0FFFFFF" FontSize="12" Margin="0,2" />
                     <TextBlock Text="GPL-3.0 开源" Foreground="#60FFFFFF" FontSize="11" Margin="0,2" />
@@ -51,11 +51,11 @@
 
 FontSize="12" Cursor="Hand" />
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,16,0">
-                    <Button x:Name="BtnCancel" Content="取消" Width="72" Height="32" Margin="0,0,8,0"
+                    <Button x:Name="BtnCancel" Content="Cancel" Width="72" Height="32" Margin="0,0,8,0"
                             Background="Transparent" Foreground="#A0FFFFFF" BorderBrush="#40FFFFFF" BorderThickness="1"
     
 FontSize="12" Cursor="Hand" VerticalAlignment="Center" />
-                    <Button x:Name="BtnConfirm" Content="确定" Width="72" Height="32"
+                    <Button x:Name="BtnConfirm" Content="OK" Width="72" Height="32"
                             Background="#007ACC" Foreground="White" BorderThickness="0"
     
 FontSize="12" Cursor="Hand" VerticalAlignment="Center" />

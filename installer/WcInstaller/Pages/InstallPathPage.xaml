@@ -3,15 +3,15 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid Margin="32">
         <StackPanel VerticalAlignment="Center">
-            <TextBlock Text="选择安装位置" FontSize="18" FontWeight="Bold" Margin="0,0,0,16"/>
-            <TextBlock Text="安装程序将把 Wallpaper Connecter 安装到以下位置。" FontSize="13" Foreground="#666" Margin="0,0,0,16"/>
+            <TextBlock Text="Choose Install Location" FontSize="18" FontWeight="Bold" Margin="0,0,0,16"/>
+            <TextBlock Text="The setup will install Wallpaper Connecter to the following location。" FontSize="13" Foreground="#666" Margin="0,0,0,16"/>
             <Grid Margin="0,0,0,8">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <TextBox x:Name="PathBox" Grid.Column="0" Height="32" VerticalContentAlignment="Center" Padding="8,0"/>
-                <Button Grid.Column="1" Content="浏览..." Margin="8,0,0,0" Click="Browse_Click" Height="32"/>
+                <Button Grid.Column="1" Content="Browse..." Margin="8,0,0,0" Click="Browse_Click" Height="32"/>
             </Grid>
             <TextBlock x:Name="ErrorText" Foreground="Red" FontSize="12" Margin="0,4,0,0" Visibility="Collapsed"/>
         </StackPanel>

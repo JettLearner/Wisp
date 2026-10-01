@@ -25,7 +25,7 @@ namespace WcInstaller.Pages
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("安装失败: " + ex.Message + "\n\n程序将关闭。", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Installation failed: " + ex.Message + "\n\nThe program will close。", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     win.Close();
                     return;
                 }

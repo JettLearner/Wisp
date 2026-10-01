@@ -3,10 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid Margin="32">
         <StackPanel VerticalAlignment="Center">
-            <TextBlock Text="选择快捷方式" FontSize="18" FontWeight="Bold" Margin="0,0,0,16"/>
+            <TextBlock Text="Choose Shortcuts" FontSize="18" FontWeight="Bold" Margin="0,0,0,16"/>
             <CheckBox x:Name="DesktopCheck" Content="创建桌面快捷方式" IsChecked="True" Margin="0,8" FontSize="14"/>
             <CheckBox x:Name="StartMenuCheck" Content="创建开始菜单快捷方式" IsChecked="True" Margin="0,8" FontSize="14"/>
-            <CheckBox x:Name="LaunchCheck" Content="安装完成后立即启动" IsChecked="True" Margin="0,24,0,0" FontSize="14"/>
+            <CheckBox x:Name="LaunchCheck" Content="Launch after installation" IsChecked="True" Margin="0,24,0,0" FontSize="14"/>
         </StackPanel>
     </Grid>
 </Page>

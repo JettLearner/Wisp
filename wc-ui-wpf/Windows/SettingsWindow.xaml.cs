@@ -54,11 +54,11 @@ public partial class SettingsWindow : Window
                         try { File.Delete(f); cleared++; } catch { }
                     }
                 }
-                MessageBox.Show($"已清除 {cleared} 个日志文件。", "清除完成", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"已清除 {cleared} log files。", "Cache Cleared", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("清除失败: " + ex.Message, "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("清除失败: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         };
 

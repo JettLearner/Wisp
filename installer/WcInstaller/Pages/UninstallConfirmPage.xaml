@@ -3,10 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid Margin="40">
         <StackPanel VerticalAlignment="Center">
-            <TextBlock Text="卸载 Wallpaper Connecter" FontSize="22" FontWeight="Bold" Margin="0,0,0,16"/>
+            <TextBlock Text="Uninstall Wisp" FontSize="22" FontWeight="Bold" Margin="0,0,0,16"/>
             <TextBlock x:Name="PathText" FontSize="14" Foreground="#333" Margin="0,0,0,8"/>
-            <TextBlock Text="确定要卸载此程序吗？所有程序文件将被删除。" FontSize="13" Foreground="#666" Margin="0,0,0,24"/>
-            <TextBlock Text="点击下一步开始卸载。" FontSize="13" Foreground="#888"/>
+            <TextBlock Text="Are you sure you want to uninstall?？All program files will be removed。" FontSize="13" Foreground="#666" Margin="0,0,0,24"/>
+            <TextBlock Text="Click Next to begin。" FontSize="13" Foreground="#888"/>
         </StackPanel>
     </Grid>
 </Page>

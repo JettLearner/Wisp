@@ -22,7 +22,7 @@ namespace WcInstaller.Pages
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("卸载失败: " + ex.Message, "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("卸载失败: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             };
         }

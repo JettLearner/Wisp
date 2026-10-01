@@ -18,8 +18,8 @@ namespace WcInstaller.Pages
         public bool Validate()
         {
             var path = PathBox.Text.Trim();
-            if (string.IsNullOrEmpty(path)) { ErrorText.Text = "请输入安装路径"; ErrorText.Visibility = Visibility.Visible; return false; }
-            try { System.IO.Path.GetFullPath(path); } catch { ErrorText.Text = "路径格式不正确"; ErrorText.Visibility = Visibility.Visible; return false; }
+            if (string.IsNullOrEmpty(path)) { ErrorText.Text = "Please enter an install path"; ErrorText.Visibility = Visibility.Visible; return false; }
+            try { System.IO.Path.GetFullPath(path); } catch { ErrorText.Text = "Invalid path format"; ErrorText.Visibility = Visibility.Visible; return false; }
             var win = (MainWindow)Window.GetWindow(this);
             win.State.InstallPath = path;
             ErrorText.Visibility = Visibility.Collapsed;

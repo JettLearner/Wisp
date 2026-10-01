@@ -12,7 +12,7 @@ namespace WcInstaller
         public static void Install(InstallState state, IProgress<int> progress, IProgress<string> status)
         {
             // 1. 关闭正在运行的程序（执行两次，等够时间）
-            status.Report("正在关闭运行中的程序...");
+            status.Report("Closing running program......");
             Run("taskkill", "/F /IM WcUiWpf.exe");
             Run("taskkill", "/F /IM wc-core.exe");
             System.Threading.Thread.Sleep(3000);
@@ -22,7 +22,7 @@ namespace WcInstaller
             progress.Report(10);
 
             // 2. 解压
-            status.Report("正在解压文件...");
+            status.Report("Extracting files......");
             string tempDir = Path.Combine(Path.GetTempPath(), "WcInstall_" + Guid.NewGuid().ToString("N").Substring(0, 8));
             Directory.CreateDirectory(tempDir);
             try
@@ -40,7 +40,7 @@ namespace WcInstaller
                 progress.Report(30);
 
                 // 3. 创建目录并复制
-                status.Report("正在复制文件...");
+                status.Report("Copying files......");
                 if (!Directory.Exists(state.InstallPath))
                     Directory.CreateDirectory(state.InstallPath);
                 CopyDir(tempDir, state.InstallPath);
@@ -64,10 +64,10 @@ namespace WcInstaller
                 progress.Report(95);
 
                 // 5. 写卸载 bat
-                string bat = "@echo off\r\nchcp 65001 >nul\r\ntitle 卸载 Wallpaper Connecter\r\necho 正在卸载...\r\ntaskkill /F /IM WcUiWpf.exe >nul 2>&1\r\ntaskkill /F /IM wc-core.exe >nul 2>&1\r\ntimeout /t 2 /nobreak >nul\r\nrmdir /S /Q \"" + state.InstallPath + "\"\r\ndel /Q \"%USERPROFILE%\\Desktop\\Wallpaper Connecter.lnk\" >nul 2>&1\r\ndel /Q \"%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Wallpaper Connecter.lnk\" >nul 2>&1\r\necho 卸载完成！\r\npause\r\n";
+                string bat = "@echo off\r\nchcp 65001 >nul\r\ntitle Uninstall Wisp\r\necho Uninstalling......\r\ntaskkill /F /IM WcUiWpf.exe >nul 2>&1\r\ntaskkill /F /IM wc-core.exe >nul 2>&1\r\ntimeout /t 2 /nobreak >nul\r\nrmdir /S /Q \"" + state.InstallPath + "\"\r\ndel /Q \"%USERPROFILE%\\Desktop\\Wallpaper Connecter.lnk\" >nul 2>&1\r\ndel /Q \"%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Wallpaper Connecter.lnk\" >nul 2>&1\r\necho Uninstall Complete！\r\npause\r\n";
                 File.WriteAllText(Path.Combine(state.InstallPath, "uninstall.bat"), bat, new System.Text.UTF8Encoding(true));
                 progress.Report(100);
-                status.Report("安装完成！");
+                status.Report("Installation Complete！");
             }
             finally
             {
@@ -77,22 +77,22 @@ namespace WcInstaller
 
         public static void Uninstall(string installPath, IProgress<int> progress, IProgress<string> status)
         {
-            status.Report("正在关闭程序...");
+            status.Report("Closing program......");
             Run("taskkill", "/F /IM WcUiWpf.exe");
             Run("taskkill", "/F /IM wc-core.exe");
             System.Threading.Thread.Sleep(2000);
             progress.Report(20);
 
-            status.Report("删除文件...");
+            status.Report("Removing files......");
             if (Directory.Exists(installPath))
                 Directory.Delete(installPath, true);
             progress.Report(70);
 
-            status.Report("删除快捷方式...");
+            status.Report("Removing shortcuts......");
             try { File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Wallpaper Connecter.lnk")); } catch { }
             try { File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "Wallpaper Connecter.lnk")); } catch { }
             progress.Report(100);
-            status.Report("卸载完成！");
+            status.Report("Uninstall Complete！");
         }
 
         public static string? FindExistingInstall()

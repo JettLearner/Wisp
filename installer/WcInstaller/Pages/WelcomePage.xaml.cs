@@ -14,8 +14,8 @@ namespace WcInstaller.Pages
                 {
                     bool integrity = true;
                     string msg = integrity
-                        ? $"检测到 Wallpaper Connecter 已安装在：\n{existing}\n\n是否覆盖安装？"
-                        : $"检测到 Wallpaper Connecter 安装目录（文件不完整）：\n{existing}\n\n是否重新安装？";
+                        ? $"Wisp is already installed在：\n{existing}\n\nDo you want to overwrite?？"
+                        : $"检测到 Wallpaper Connecter 安装目录（Files are incomplete）：\n{existing}\n\n是否重新安装？";
                     var result = MessageBox.Show(msg, "已检测到安装", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (result == MessageBoxResult.No)
                     {

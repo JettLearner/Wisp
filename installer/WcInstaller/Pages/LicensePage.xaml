@@ -7,7 +7,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="许可协议" FontSize="18" FontWeight="Bold" Margin="0,0,0,16"/>
+        <TextBlock Grid.Row="0" Text="License Agreement" FontSize="18" FontWeight="Bold" Margin="0,0,0,16"/>
         <TextBox Grid.Row="1" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
                  FontFamily="Consolas" FontSize="11" Background="#FFF" Padding="12" BorderBrush="#CCC">
 GNU GENERAL PUBLIC LICENSE
@@ -34,6 +34,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
         </TextBox>
-        <CheckBox Grid.Row="2" x:Name="AcceptCheck" Content="我已阅读并同意上述许可协议" Margin="0,16,0,0" Checked="AcceptCheck_Checked" Unchecked="AcceptCheck_Unchecked"/>
+        <CheckBox Grid.Row="2" x:Name="AcceptCheck" Content="I have read and agree to the license agreement" Margin="0,16,0,0" Checked="AcceptCheck_Checked" Unchecked="AcceptCheck_Unchecked"/>
     </Grid>
 </Page>
