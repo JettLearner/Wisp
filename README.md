@@ -44,14 +44,27 @@ Windows desktop floating tool — floating ball, music widget, transparent AI ap
 
 ### Option 1: Download installer (recommended)
 
-Go to [Releases](https://github.com/JettLearner/Wisp/releases):
+Go to [Releases](https://github.com/JettLearner/Wisp/releases) and download one of the two installers:
 
 | File | Size | Description |
 |------|------|-------------|
-| `Wisp-Setup.exe` | ~66 MB | Self-contained, bundles .NET runtime |
-| `Wisp-Setup-LooseFiles.exe` | ~7 MB | Framework-dependent, requires .NET 8 |
+| `Wisp-Setup.exe` | ~7 MB | **Recommended.** Framework-dependent; auto-detects .NET 8 Desktop Runtime. If missing, prompts user to download it. |
+| `Wisp-Setup-LooseFiles.exe` | ~7 MB | Same as above; for users who already have .NET 8 installed. |
 
-Install wizard includes: GPL-3.0 license confirmation, custom install path, shortcuts, auto-close running instance.
+> **Note:** Both installers are the same size. The self-contained .NET-bundled build (~66 MB) is available on request — open an issue.
+
+#### What the installer does
+
+1. **Welcome page** — shows app name and version
+2. **License agreement** — GPL-3.0, must be checked before continuing
+3. **Install path** — defaults to `C:\Program Files\Wisp`, customizable
+4. **Shortcuts** — optionally create desktop / start menu shortcuts
+5. **Install progress** — closes any running instance, extracts files, creates shortcuts
+6. **Finish** — optionally launch Wisp immediately
+
+#### Uninstaller
+
+Run `uninstall.exe` from the install folder, or use **Add/Remove Programs**. It removes all files, shortcuts, and settings.
 
 ### Option 2: Build from source
 

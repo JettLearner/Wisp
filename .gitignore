@@ -39,3 +39,5 @@ _archive/
 BgInjector/
 IndexedDbTester/
 MemoryReaderTest/
+# Build artifacts for GitHub Releases
+releases/
