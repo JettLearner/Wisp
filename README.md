@@ -1,4 +1,4 @@
-# Wallpaper Connecter
+# Wisp
 
 Windows 桌面悬浮工具 — 悬浮球入口、音乐悬浮窗、AI 软件窗口透明效果。
 
@@ -45,7 +45,7 @@ Windows 桌面悬浮工具 — 悬浮球入口、音乐悬浮窗、AI 软件窗�
 
 ### 方式一：下载安装包（推荐）
 
-前往 [Releases](https://github.com/JettLearner/wallpaper-connecter/releases) 下载：
+前往 [Releases](https://github.com/JettLearner/Wisp/releases) 下载：
 
 | 文件 | 大小 | 说明 |
 |------|------|------|
@@ -85,7 +85,7 @@ dotnet publish -c Release
 ## 项目结构
 
 ```
-wallpaper-connecter/
+Wisp/
 ├── crates/
 │   ├── wc-common/          # 共享类型：事件、配置、富文本 AST、APP 规则
 │   └── wc-core/            # Rust 守护进程：事件总线、WebSocket、心跳、壁纸取色
