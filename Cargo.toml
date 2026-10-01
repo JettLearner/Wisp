@@ -1,0 +1,37 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/wc-common",
+    "crates/wc-core",
+]
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/JettLearner/wallpaper-connecter"
+authors = ["周璟琦-Jett"]
+
+[workspace.dependencies]
+wc-common = { path = "crates/wc-common" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+futures-util = "0.3"
+async-trait = "0.1"
+thiserror = "1"
+parking_lot = "0.12"
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+sysinfo = "0.32"
+winreg = "0.52"
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_Graphics_Dwm",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json"] }

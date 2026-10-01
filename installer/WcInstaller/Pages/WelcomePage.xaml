@@ -1,0 +1,14 @@
+<Page x:Class="WcInstaller.Pages.WelcomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="40">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="Wallpaper Connecter" FontSize="28" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,8"/>
+            <TextBlock Text="安装向导" FontSize="18" Foreground="#333" Margin="0,0,0,24"/>
+            <TextBlock Text="创作者：周璟琦-Jett" FontSize="13" Foreground="#666" Margin="0,0,0,8"/>
+            <TextBlock Text="版本：v0.1.0" FontSize="13" Foreground="#666" Margin="0,0,0,8"/>
+            <TextBlock Text="协议：GPL-3.0 开源" FontSize="13" Foreground="#666" Margin="0,0,0,32"/>
+            <TextBlock Text="点击下一步继续安装。" FontSize="14" Foreground="#888"/>
+        </StackPanel>
+    </Grid>
+</Page>

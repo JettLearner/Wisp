@@ -1,0 +1,11 @@
+<Page x:Class="WcInstaller.Pages.UninstallFinishPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="40">
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="卸载完成！" FontSize="24" FontWeight="Bold" Foreground="#007ACC" Margin="0,0,0,16"/>
+            <TextBlock Text="Wallpaper Connecter 已从您的计算机中移除。" FontSize="14" Foreground="#333" Margin="0,0,0,32"/>
+            <TextBlock Text="点击完成关闭卸载向导。" FontSize="13" Foreground="#888"/>
+        </StackPanel>
+    </Grid>
+</Page>

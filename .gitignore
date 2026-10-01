@@ -1,0 +1,41 @@
+# === Rust ===
+/target
+**/*.rs.bk
+Cargo.lock
+
+# === .NET / WPF ===
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+.vs/
+*.pdb
+
+# === IDE ===
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# === OS ===
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# === 安装产物（不进 Git，由 CI 生成）===
+installer/*.exe
+installer/*.zip
+installer/WcInstaller/payload.zip
+
+# === 用户配置（不进 Git）===
+config.json
+window-state.json
+ui-config.json
+*.log
+
+# === 废弃目录 ===
+_archive/
+BgInjector/
+IndexedDbTester/
+MemoryReaderTest/
